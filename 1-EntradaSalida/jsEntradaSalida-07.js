@@ -2,24 +2,32 @@
 Debemos lograr tomar Los numeros por ID ,
 transformarlos a enteros (parseInt),realizar la operación correcta y 
 mostrar el resulto por medio de "ALERT"
-ej.: "la Resta es 750"*/ 
-function sumar()
-{	
-	alert("ok");	
+ej.: "la Resta es 750"*/
+
+function sumar() {
+  let numerUno = parseInt(txtIdNumeroUno.value);
+  let numerDos = parseInt(txtIdNumeroDos.value);
+  let total = numerUno + numerDos;
+  alert(`la suma es ${total}`);
 }
 
-function restar()
-{
-	
+function restar() {
+  let numerUno = parseInt(txtIdNumeroUno.value);
+  let numerDos = parseInt(txtIdNumeroDos.value);
+  let total = numerUno - numerDos;
+  alert(`la resta es ${total}`);
 }
 
-function multiplicar()
-{ 
-	
+function multiplicar() {
+  let numerUno = parseInt(txtIdNumeroUno.value);
+  let numerDos = parseInt(txtIdNumeroDos.value);
+  let total = numerUno * numerDos;
+  alert(`la multiplicación es ${total}`);
 }
 
-function dividir()
-{
-	
+function dividir() {
+  let numerUno = parseInt(txtIdNumeroUno.value);
+  let numerDos = parseInt(txtIdNumeroDos.value);
+  let total = numerUno / numerDos;
+  alert(`la división es ${total}`);
 }
-
