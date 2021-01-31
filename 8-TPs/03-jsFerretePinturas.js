@@ -10,14 +10,16 @@ function ObtenerValores() {
 
 function FahrenheitCentigrados() {
   ObtenerValores();
-  let centigrados = ((temperatura - 32) * 5) / 9;
+  let fahrenheit = temperatura;
+  let centigrados = ((fahrenheit - 32) * 5) / 9;
 
-  alert(`La temperatura de ${temperatura}°F equivale a ${centigrados}°C.`);
+  alert(`La temperatura de ${fahrenheit}°F equivale a ${centigrados}°C.`);
 }
 
 function CentigradosFahrenheit() {
   ObtenerValores();
-  let fahrenheit = (temperatura * 9) / 5 + 32;
+  let centigrados = temperatura;
+  let fahrenheit = (centigrados * 9) / 5 + 32;
 
-  alert(`La temperatura de ${temperatura}°C equivale a ${fahrenheit}°F.`);
+  alert(`La temperatura de ${centigrados}°C equivale a ${fahrenheit}°F.`);
 }
