@@ -4,15 +4,50 @@ B.	mostrar la cantidad de alambre a comprar  si se ingresara el radio  de un ter
 C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de cal, debemos mostrar cuantas bolsas se necesitan de cada uno para las medidas que nos ingresen.
 */
 
-function Rectangulo () 
-{
+// Inicializacion de variables
+const pi = 3.14;
+let largoTerreno = 0;
+let anchoTerreno = 0;
+let radioTerreno = 0;
 
+// Funcion para cargar los valores en cada OnClick
+function ObtenerValores() {
+  largoTerreno = parseInt(document.getElementById('txtIdLargo').value);
+  anchoTerreno = parseInt(document.getElementById('txtIdAncho').value);
+  radioTerreno = parseInt(document.getElementById('txtIdRadio').value);
 }
-function Circulo () 
-{
-	
+
+function Rectangulo() {
+  ObtenerValores();
+
+  let largoUnHilo = (largoTerreno + anchoTerreno) * 2;
+  let largoTresHilos = largoUnHilo * 3;
+
+  alert(
+    `Para terreno rectangular es necesario ${largoTresHilos} mts de alambre `
+  );
 }
-function Materiales () 
-{
-	
+
+function Circulo() {
+  ObtenerValores();
+
+  let circunferencia = radioTerreno * 2 * pi;
+  let largoTresHilo = circunferencia * 3;
+
+  alert(
+    `Para alamabrar el terreno circular es necesario un alambre de ${largoTresHilo} mts.`
+  );
+}
+function Materiales() {
+  ObtenerValores();
+
+  let cementoPorMetro = 2;
+  let calPorMetro = 3;
+
+  let totalCemento = cementoPorMetro * anchoTerreno * largoTerreno;
+  let totalCal = calPorMetro * anchoTerreno * largoTerreno;
+
+  alert(
+    `Para el contrapiso son necesarias ${totalCemento} bolsas de cemento y ${totalCal} bolsas de cal.`
+  );
 }
