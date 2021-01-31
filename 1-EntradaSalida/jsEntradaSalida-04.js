@@ -3,8 +3,8 @@ Debemos lograr tomar un dato por 'PROMPT'
 y lo muestro por 'ID' al presionar el botón 'mostrar'
 */
 function mostrar() {
-  let mensaje = prompt('Escribir mensaje');
-  txtIdNombre.value = mensaje;
+  let inputId = document.getElementById('txtIdNombre');
+  inputId.value = prompt('Escribir mensaje');
 
-  alert(txtIdNombre.value);
+  alert(inputId.value);
 }
