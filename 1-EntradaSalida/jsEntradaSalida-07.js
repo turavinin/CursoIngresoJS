@@ -28,6 +28,8 @@ function multiplicar() {
 function dividir() {
   let numerUno = parseInt(document.getElementById('txtIdNumeroUno').value);
   let numerDos = parseInt(document.getElementById('txtIdNumeroDos').value);
+
+  // Si se dvidie por cero y no se maneja el error, en javascript se devulete "infinity" => se tiene que validar.
   let total = numerUno / numerDos;
   alert(`la división es ${total}`);
 }

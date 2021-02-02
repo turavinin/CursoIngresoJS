@@ -5,7 +5,7 @@ C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de c
 */
 
 // Inicializacion de variables
-const pi = 3.14;
+const PI = 3.14;
 let largoTerreno = 0;
 let anchoTerreno = 0;
 let radioTerreno = 0;
@@ -31,7 +31,7 @@ function Rectangulo() {
 function Circulo() {
   ObtenerValores();
 
-  let circunferencia = radioTerreno * 2 * pi;
+  let circunferencia = radioTerreno * 2 * PI;
   let largoTresHilo = circunferencia * 3;
 
   alert(
