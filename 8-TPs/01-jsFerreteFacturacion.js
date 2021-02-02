@@ -9,9 +9,9 @@ let precioDos = 0;
 let precioTres = 0;
 
 function ObtenerValores() {
-  precioUno = parseInt(document.getElementById('txtIdPrecioUno').value);
-  precioDos = parseInt(document.getElementById('txtIdPrecioDos').value);
-  precioTres = parseInt(document.getElementById('txtIdPrecioTres').value);
+  precioUno = parseFloat(document.getElementById('txtIdPrecioUno').value);
+  precioDos = parseFloat(document.getElementById('txtIdPrecioDos').value);
+  precioTres = parseFloat(document.getElementById('txtIdPrecioTres').value);
 }
 
 function Sumar() {

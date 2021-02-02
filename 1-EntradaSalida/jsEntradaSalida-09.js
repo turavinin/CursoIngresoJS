@@ -9,5 +9,4 @@ function mostrarAumento() {
 
   let sueldoMasDiezProciento = sueldo + 0.1 * sueldo;
   txtIdResultado.value = sueldoMasDiezProciento;
-  alert('ok');
 }
