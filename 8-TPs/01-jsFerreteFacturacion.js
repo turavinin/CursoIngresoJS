@@ -4,26 +4,32 @@ B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 
+let precioUno = 0;
+let precioDos = 0;
+let precioTres = 0;
+
+function ObtenerValores() {
+  precioUno = parseInt(document.getElementById('txtIdPrecioUno').value);
+  precioDos = parseInt(document.getElementById('txtIdPrecioDos').value);
+  precioTres = parseInt(document.getElementById('txtIdPrecioTres').value);
+}
+
 function Sumar() {
-  let precioUno = parseInt(document.getElementById('txtIdPrecioUno').value);
-  let precioDos = parseInt(document.getElementById('txtIdPrecioDos').value);
-  let precioTres = parseInt(document.getElementById('txtIdPrecioTres').value);
+  ObtenerValores();
+
   let sumaPrecios = precioUno + precioDos + precioTres;
 
   alert(`La suma es: ${sumaPrecios}$`);
 }
 function Promedio() {
-  let precioUno = parseInt(document.getElementById('txtIdPrecioUno').value);
-  let precioDos = parseInt(document.getElementById('txtIdPrecioDos').value);
-  let precioTres = parseInt(document.getElementById('txtIdPrecioTres').value);
+  ObtenerValores();
+
   let promedioPrecios = (precioUno + precioDos + precioTres) / 3;
 
   alert(`El promedio es: ${promedioPrecios}$`);
 }
 function PrecioFinal() {
-  let precioUno = parseInt(document.getElementById('txtIdPrecioUno').value);
-  let precioDos = parseInt(document.getElementById('txtIdPrecioDos').value);
-  let precioTres = parseInt(document.getElementById('txtIdPrecioTres').value);
+  ObtenerValores();
 
   let sumaPrecios = precioUno + precioDos + precioTres;
   let precioFinalMasIva21 = sumaPrecios + (21 / 100) * sumaPrecios;
