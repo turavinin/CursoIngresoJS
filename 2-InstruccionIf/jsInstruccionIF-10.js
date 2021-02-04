@@ -1,6 +1,11 @@
-function mostrar()
-{
-	//Genero el número RANDOM entre 1 y 10 
-	alert("ok");
+function mostrar() {
+  let numeroRandom = Math.floor(Math.random() * 10) + 1;
 
-}//FIN DE LA FUNCIÓN
+  if (numeroRandom < 4) {
+    alert(`La nota es ${numeroRandom}. Vamos, la proxima se puede`);
+  } else if (numeroRandom < 9) {
+    alert(`La nota es ${numeroRandom}. Aprobó`);
+  } else {
+    alert(`La nota es ${numeroRandom}. Excelente`);
+  }
+} //FIN DE LA FUNCIÓN
