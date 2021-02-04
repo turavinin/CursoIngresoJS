@@ -12,9 +12,9 @@ let radioTerreno = 0;
 
 // Funcion para cargar los valores en cada OnClick
 function ObtenerValores() {
-  largoTerreno = parseInt(document.getElementById('txtIdLargo').value);
-  anchoTerreno = parseInt(document.getElementById('txtIdAncho').value);
-  radioTerreno = parseInt(document.getElementById('txtIdRadio').value);
+  largoTerreno = parseFloat(document.getElementById('txtIdLargo').value);
+  anchoTerreno = parseFloat(document.getElementById('txtIdAncho').value);
+  radioTerreno = parseFloat(document.getElementById('txtIdRadio').value);
 }
 
 function Rectangulo() {
