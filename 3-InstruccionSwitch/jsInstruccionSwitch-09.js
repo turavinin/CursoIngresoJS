@@ -37,7 +37,6 @@ function mostrar() {
             alert(
               `Para el destino de ${destino} en ${estacion}, el precio es \$${precioMenos10}`
             );
-            break;
         }
       }
       break;
@@ -61,29 +60,25 @@ function mostrar() {
             alert(
               `Para el destino de ${destino} en ${estacion}, el precio es \$${precioMas10}`
             );
-            break;
         }
       }
       break;
 
     case 'Otoño':
-    case 'Primavera':
-      {
-        switch (destino) {
-          case 'Cordoba':
-            alert(
-              `Para el destino de ${destino} en ${estacion}, el precio es \$${precioBase}`
-            );
-            break;
+    case 'Primavera': {
+      switch (destino) {
+        case 'Cordoba':
+          alert(
+            `Para el destino de ${destino} en ${estacion}, el precio es \$${precioBase}`
+          );
+          break;
 
-          default:
-            alert(
-              `Para el destino de ${destino} en ${estacion}, el precio es \$${precioMas10}`
-            );
-            break;
-        }
+        default:
+          alert(
+            `Para el destino de ${destino} en ${estacion}, el precio es \$${precioMas10}`
+          );
       }
-      break;
+    }
   }
 }
 //FIN DE LA FUNCIÓN
