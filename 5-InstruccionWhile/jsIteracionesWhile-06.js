@@ -10,5 +10,5 @@ function mostrar() {
   }
 
   document.getElementById('txtIdSuma').value = acumulador;
-  document.getElementById('txtIdPromedio').value = acumulador / 5;
+  document.getElementById('txtIdPromedio').value = acumulador / contador;
 } //FIN DE LA FUNCIÓN

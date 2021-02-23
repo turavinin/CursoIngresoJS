@@ -8,77 +8,89 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
-{
+function CalcularPrecio() {
   // Almacenar en variable integer de cantidad de lamparitas
-  let cantidadLampartias = parseInt(document.getElementById("txtIdCantidad").value);
+  let cantidadLampartias = parseInt(
+    document.getElementById('txtIdCantidad').value
+  );
   // Almacenar en variable la eleccion de empresa de lampartias
   let empresa = document.getElementById('Marca').value;
   // Almacenar en variable el campo value de precio con descuento
-  let campoPrecioDescuento = document.getElementById("txtIdprecioDescuento");
+  let campoPrecioDescuento = document.getElementById('txtIdprecioDescuento');
+  // Almacenar precio indivisual
+  let precioBase = 35;
   // Almacenar en variable el precio base de lamparita
-  let precioBase = 35 * cantidadLampartias;
+  let precioBaseTotal = precioBase * cantidadLampartias;
   // Declarar variable precio con descuento
   let precioConDescuento;
   // Declarar varialbe desde impuestos
-  let impuestos; 
+  let impuestos;
+  // Declara descuento
+  let descuento;
 
   // If => cantidad de lampartias > 6 => total - 50%
   if (cantidadLampartias >= 6) {
-    precioConDescuento = precioBase - precioBase * 0.5;
+    descuento = 0.5;
+    precioConDescuento = precioBaseTotal - precioBaseTotal * descuento;
   }
 
   // Switch (key => cantidad lampartias)
   switch (cantidadLampartias) {
     case 5:
       switch (empresa) {
-        case "ArgentinaLuz":
-          precioConDescuento = precioBase - precioBase * 0.4;
+        case 'ArgentinaLuz':
+          descuento = 0.4;
+          precioConDescuento = precioBaseTotal - precioBaseTotal * descuento;
           break;
         default:
-          precioConDescuento = precioBase - precioBase * 0.3;
+          descuento = 0.3;
+          precioConDescuento = precioBaseTotal - precioBaseTotal * descuento;
           break;
       }
       break;
 
     case 4:
       switch (empresa) {
-        case "ArgentinaLuz":
-        case "FelipeLamparas":
-          precioConDescuento = precioBase - precioBase * 0.25;
+        case 'ArgentinaLuz':
+        case 'FelipeLamparas':
+          descuento = 0.25;
+          precioConDescuento = precioBaseTotal - precioBaseTotal * descuento;
           break;
         default:
-          precioConDescuento = precioBase - precioBase * 0.20;
+          descuento = 0.2;
+          precioConDescuento = precioBaseTotal - precioBaseTotal * descuento;
           break;
       }
       break;
 
     case 3:
-        switch (empresa) {
-          case 'ArgentinaLuz':
-            precioConDescuento = precioBase - precioBase * 0.15;
-            break;
-          case 'FelipeLamparas':
-            precioConDescuento = precioBase - precioBase * 0.10;
-            break;
-          default:
-            precioConDescuento = precioBase - precioBase * 0.05;
-        }
-        break;
+      switch (empresa) {
+        case 'ArgentinaLuz':
+          descuento = 0.15;
+          precioConDescuento = precioBaseTotal - precioBaseTotal * descuento;
+          break;
+        case 'FelipeLamparas':
+          descuento = 0.1;
+          precioConDescuento = precioBaseTotal - precioBaseTotal * descuento;
+          break;
+        default:
+          descuento = 0.05;
+          precioConDescuento = precioBaseTotal - precioBaseTotal * descuento;
+      }
+      break;
 
-      default:
-        precioConDescuento = precioBase;
-        break;
+    default:
+      precioConDescuento = precioBaseTotal;
+      break;
   }
 
-  // if => importe final + descuento > 120 => +10% (alert esa cantidad de impuesto) 
+  // if => importe final + descuento > 120 => +10% (alert esa cantidad de impuesto)
   if (precioConDescuento > 120) {
     impuestos = precioConDescuento * 0.1;
     campoPrecioDescuento.value = (precioConDescuento + impuestos).toFixed(2);
 
     alert(`De IIBB usted pagó ${impuestos}`);
-  }
-  else {
+  } else {
     campoPrecioDescuento.value = precioConDescuento.toFixed(2);
   }
 }
